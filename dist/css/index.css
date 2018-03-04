@@ -1,0 +1,13 @@
+h2 {
+  background-color: red;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: red;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
