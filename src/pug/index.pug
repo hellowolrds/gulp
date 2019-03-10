@@ -2,10 +2,15 @@
 html(lang="en")
 	head
 		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title Document
+		link(rel="stylesheet", href="css/reset.css")
 		link(rel="stylesheet", href="css/index.css")
+		link(rel="stylesheet", href="css/test.css")
 	body
-		h2 世界您好啊
+		.top
+			p 测试一下
+		h2.header 世界您好啊
 		div
 		- var list = [1, 2, 3, 4]
 		- for(var i = 0; i < list.length; i ++)

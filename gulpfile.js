@@ -106,6 +106,10 @@ gulp.task('serve', ['less', 'pug', 'minifyjs'], ()=>{
 	});
 	// 监听less编译
 	gulp.watch("src/less/**/*.less", ['less']);
+
+	// 监听sass编译
+	gulp.watch("src/sass/**/*.sass", ['sass']);
+
 	// 监听pug编译
 	gulp.watch("src/pug/**/*.pug", ['pug']);
 	// 监听js

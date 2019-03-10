@@ -1,15 +1,15 @@
 
 @import './common/common.less';
 
-@color: red;
+
+.top {
+	height: 2.75rem;
+	background: orange;
+}
+
 h2 {
-	background-color: @color;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
-	background-color: @color;
-	transition: all 1s;
+	font-size: 14px;
+	font-weight: normal;
+	.psd_to_px(height, 88);
+	background-color: red;
 }

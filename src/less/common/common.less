@@ -1,4 +1,42 @@
-p {
-    margin: 0;
-    padding: 0;
+// 750 尺寸的设计稿
+.psd_to_px (@name, @px) {
+    @{name}: @px / 2 * 1px;
+}
+
+// 通过手淘布局
+@baseFontSize: 75;
+.px2rem (@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+@media screen and (min-width:321px) and (max-width:375px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:414px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 22.5px;
+    }
+}
+@media screen and (min-width:750px) and (max-width:799px) {
+    html {
+        font-size: 23.5px;
+    }
 }
