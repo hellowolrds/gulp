@@ -40,7 +40,7 @@ gulp.task("less", ()=>{
 		.pipe(rename({suffix: '.min'})) 
 		// 压缩css
 		.pipe(minifycss())
-		.pipe(gulp.dest("dist/css"));
+		.pipe(gulp.dest("dist/min/css"));
 });
 // 编译sass
 gulp.task("sass", ()=>{
@@ -59,7 +59,7 @@ gulp.task("sass", ()=>{
 		.pipe(rename({suffix: '.min'})) 
 		// 压缩css
 		.pipe(minifycss())
-		.pipe(gulp.dest("dist/css"));
+		.pipe(gulp.dest("dist/min/css"));
 });
 // 编译pug
 gulp.task("pug", ()=>{
@@ -77,7 +77,7 @@ gulp.task('minifyjs', ()=>{
 		.pipe(gulp.dest("dist/js"))
 	  .pipe(rename({suffix:'.min'}))//起别名保存
 	  .pipe(uglify())//压缩
-	  .pipe(gulp.dest('dist/js'));//输出文件
+	  .pipe(gulp.dest('dist/min/js'));//输出文件
 });
 // 压缩图片
 gulp.task("minImage", ()=>{
@@ -98,20 +98,24 @@ gulp.task("minPng", ()=>{
 	      verbose: true
 	  })))
 	  .pipe(gulp.dest('dist/images'));
-})
+});
 // 开启服务器任务
 gulp.task('serve', ['less', 'pug', 'minifyjs'], ()=>{
 	browserSync.init({
 		server: '.'
 	});
 	// 监听less编译
-	gulp.watch("src/less/*.less", ['less']);
+	gulp.watch("src/less/**/*.less", ['less']);
 	// 监听pug编译
-	gulp.watch("src/pug/*.pug", ['pug']);
+	gulp.watch("src/pug/**/*.pug", ['pug']);
 	// 监听js
 	gulp.watch("src/js/*.js", ['minifyjs']);
 	// 实时刷新页面
-	gulp.watch("./src/**/*.*").on('change', browserSync.reload);
-})
+	gulp.watch("./src/**/**/*.*").on('change', browserSync.reload);
+});
+
+// 创建初始化模板
+
+
 
 gulp.task("default", ['serve']);
