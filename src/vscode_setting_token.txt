@@ -1,6 +1,0 @@
-alt+shift+d 输入 61804e7ada6b96b89ab471c685333b4e49a58d58  下载配置
-
-
-alt+shift+u 上传vscode配置
-
-
