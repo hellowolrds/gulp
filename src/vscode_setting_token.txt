@@ -1,0 +1,5 @@
+alt+shift+d 输入 0de50e09d66b7ec1a16ae9b6ed26afa169230a67  下载配置
+
+
+alt+shift+u 上传vscode配置
+
